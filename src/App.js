@@ -34,7 +34,8 @@ class App extends Component {
                 {
                     this.state.displayBio ? (
                         <div>
-                            <p>I work as a Software Engineer at NBNCO.</p>
+                            <p>I work as a Software Engineer.</p>
+                            <p>I'm always looking forward to working on meaningful projects. Looking forward to hear from you soon.</p>
                             <p>Skillset: Python, Javascript, React, Shell scripting</p>
                             <button onClick={this.toggleDisplayBio}>Show less</button>
                         </div>
