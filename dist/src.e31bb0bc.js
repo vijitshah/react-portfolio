@@ -28325,7 +28325,7 @@ var PROJECTS = [{
 }];
 var _default = PROJECTS;
 exports.default = _default;
-},{"../assets/project1.png":"assets/project1.png","../assets/project2.png":"assets/project2.png","../assets/project3.png":"assets/project3.png"}],"Projects.js":[function(require,module,exports) {
+},{"../assets/project1.png":"assets/project1.png","../assets/project2.png":"assets/project2.png","../assets/project3.png":"assets/project3.png"}],"components/Projects.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28333,106 +28333,45 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
-var _projects = _interopRequireDefault(require("./data/projects"));
+var _projects = _interopRequireDefault(require("../data/projects"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var Project = /*#__PURE__*/function (_Component) {
-  _inherits(Project, _Component);
-
-  var _super = _createSuper(Project);
-
-  function Project() {
-    _classCallCheck(this, Project);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Project, [{
-    key: "render",
-    value: function render() {
-      console.log('this.props', this.props);
-      var _this$props$project = this.props.project,
-          title = _this$props$project.title,
-          image = _this$props$project.image,
-          description = _this$props$project.description;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        style: {
-          display: "inline-block",
-          width: 300,
-          margin: 10
-        }
-      }, /*#__PURE__*/_react.default.createElement("h3", null, title), /*#__PURE__*/_react.default.createElement("img", {
-        src: image,
-        alt: "profile",
-        style: {
-          width: 200,
-          height: 120
-        }
-      }), /*#__PURE__*/_react.default.createElement("p", null, description));
+var Project = function Project(props) {
+  var _props$project = props.project,
+      title = _props$project.title,
+      image = _props$project.image,
+      description = _props$project.description;
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      display: "inline-block",
+      width: 300,
+      margin: 10
     }
-  }]);
-
-  return Project;
-}(_react.Component);
-
-var Projects = /*#__PURE__*/function (_Component2) {
-  _inherits(Projects, _Component2);
-
-  var _super2 = _createSuper(Projects);
-
-  function Projects() {
-    _classCallCheck(this, Projects);
-
-    return _super2.apply(this, arguments);
-  }
-
-  _createClass(Projects, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Highlighted Projects"), /*#__PURE__*/_react.default.createElement("div", null, _projects.default.map(function (PROJECT) {
-        return /*#__PURE__*/_react.default.createElement(Project, {
-          key: PROJECT.id,
-          project: PROJECT
-        });
-      })));
+  }, /*#__PURE__*/_react.default.createElement("h3", null, title), /*#__PURE__*/_react.default.createElement("img", {
+    src: image,
+    alt: "profile",
+    style: {
+      width: 200,
+      height: 120
     }
-  }]);
+  }), /*#__PURE__*/_react.default.createElement("p", null, description));
+};
 
-  return Projects;
-}(_react.Component);
+var Projects = function Projects() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Highlighted Projects"), /*#__PURE__*/_react.default.createElement("div", null, _projects.default.map(function (PROJECT) {
+    return /*#__PURE__*/_react.default.createElement(Project, {
+      key: PROJECT.id,
+      project: PROJECT
+    });
+  })));
+};
 
 var _default = Projects;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./data/projects":"data/projects.js"}],"assets/email_icon.png":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../data/projects":"data/projects.js"}],"assets/email_icon.png":[function(require,module,exports) {
 module.exports = "/email_icon.d6c23642.png";
 },{}],"assets/github_icon.png":[function(require,module,exports) {
 module.exports = "/github_icon.2b0f71f9.png";
@@ -28477,7 +28416,7 @@ var SOCIAL_PROFILES = [{
 }];
 var _default = SOCIAL_PROFILES;
 exports.default = _default;
-},{"../assets/email_icon.png":"assets/email_icon.png","../assets/github_icon.png":"assets/github_icon.png","../assets/linkedin_icon.png":"assets/linkedin_icon.png","../assets/twitter_icon.png":"assets/twitter_icon.png"}],"SocialProfiles.js":[function(require,module,exports) {
+},{"../assets/email_icon.png":"assets/email_icon.png","../assets/github_icon.png":"assets/github_icon.png","../assets/linkedin_icon.png":"assets/linkedin_icon.png","../assets/twitter_icon.png":"assets/twitter_icon.png"}],"components/SocialProfiles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28487,9 +28426,51 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _socialProfiles = _interopRequireDefault(require("./data/socialProfiles"));
+var _socialProfiles = _interopRequireDefault(require("../data/socialProfiles"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var SocialProfile = function SocialProfile(props) {
+  var _props$socialProfile = props.socialProfile,
+      link = _props$socialProfile.link,
+      image = _props$socialProfile.image;
+  return /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: link
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: image,
+    alt: "social-profile",
+    style: {
+      width: 35,
+      height: 35,
+      margin: 10
+    }
+  })));
+};
+
+var SocialProfiles = function SocialProfiles() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Connect with me!"), /*#__PURE__*/_react.default.createElement("div", null, _socialProfiles.default.map(function (SOCIAL_PROFILE) {
+    return /*#__PURE__*/_react.default.createElement(SocialProfile, {
+      key: SOCIAL_PROFILE.id,
+      socialProfile: SOCIAL_PROFILE
+    });
+  })));
+};
+
+var _default = SocialProfiles;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","../data/socialProfiles":"data/socialProfiles.js"}],"components/Title.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -28517,72 +28498,211 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var SocialProfile = /*#__PURE__*/function (_Component) {
-  _inherits(SocialProfile, _Component);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  var _super = _createSuper(SocialProfile);
+var TITLES = ['a software engineer', 'an enthusiastic learner', 'an adventure seeker', 'nature lover'];
 
-  function SocialProfile() {
-    _classCallCheck(this, SocialProfile);
+var Title = /*#__PURE__*/function (_Component) {
+  _inherits(Title, _Component);
 
-    return _super.apply(this, arguments);
-  }
+  var _super = _createSuper(Title);
 
-  _createClass(SocialProfile, [{
-    key: "render",
-    value: function render() {
-      console.log('this.props', this.props);
-      var _this$props$socialPro = this.props.socialProfile,
-          link = _this$props$socialPro.link,
-          image = _this$props$socialPro.image;
-      return /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("a", {
-        href: link
-      }, /*#__PURE__*/_react.default.createElement("img", {
-        src: image,
-        alt: "social-profile",
-        style: {
-          width: 35,
-          height: 35,
-          margin: 10
-        }
-      })));
+  function Title() {
+    var _this;
+
+    _classCallCheck(this, Title);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-  }]);
 
-  return SocialProfile;
-}(_react.Component);
+    _this = _super.call.apply(_super, [this].concat(args));
 
-var SocialProfiles = /*#__PURE__*/function (_Component2) {
-  _inherits(SocialProfiles, _Component2);
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      titleIndex: 0,
+      fadeIn: true
+    });
 
-  var _super2 = _createSuper(SocialProfiles);
+    _defineProperty(_assertThisInitialized(_this), "animateTitles", function () {
+      _this.titleInterval = setInterval(function () {
+        var titleIndex = (_this.state.titleIndex + 1) % TITLES.length;
 
-  function SocialProfiles() {
-    _classCallCheck(this, SocialProfiles);
-
-    return _super2.apply(this, arguments);
-  }
-
-  _createClass(SocialProfiles, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Connect with me!"), /*#__PURE__*/_react.default.createElement("div", null, _socialProfiles.default.map(function (SOCIAL_PROFILE) {
-        return /*#__PURE__*/_react.default.createElement(SocialProfile, {
-          key: SOCIAL_PROFILE.id,
-          socialProfile: SOCIAL_PROFILE
+        _this.setState({
+          titleIndex: titleIndex,
+          fadeIn: true
         });
-      })));
+
+        _this.timeout = setTimeout(function () {
+          return _this.setState({
+            fadeIn: false
+          });
+        }, 2000);
+      }, 4000);
+    });
+
+    return _this;
+  }
+
+  _createClass(Title, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.timeout = setTimeout(function () {
+        return _this2.setState({
+          fadeIn: false
+        });
+      }, 2000);
+      this.animateTitles();
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.titleInterval);
+      clearInterval(this.timeout);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          titleIndex = _this$state.titleIndex,
+          fadeIn = _this$state.fadeIn;
+      var title = TITLES[titleIndex];
+      return /*#__PURE__*/_react.default.createElement("p", {
+        className: fadeIn ? 'title-fade-in' : 'title-fade-out'
+      }, "I am ", title);
     }
   }]);
 
-  return SocialProfiles;
+  return Title;
 }(_react.Component);
 
-var _default = SocialProfiles;
+var _default = Title;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./data/socialProfiles":"data/socialProfiles.js"}],"assets/profile.jpg":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/Jokes.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Joke = function Joke(_ref) {
+  var _ref$joke = _ref.joke,
+      setup = _ref$joke.setup,
+      punchline = _ref$joke.punchline;
+  return /*#__PURE__*/_react.default.createElement("p", {
+    style: {
+      margin: 20
+    }
+  }, setup, " ", /*#__PURE__*/_react.default.createElement("em", null, punchline));
+};
+
+var Jokes = /*#__PURE__*/function (_Component) {
+  _inherits(Jokes, _Component);
+
+  var _super = _createSuper(Jokes);
+
+  function Jokes() {
+    var _this;
+
+    _classCallCheck(this, Jokes);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      joke: {},
+      jokes: []
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "fetchJokes", function () {
+      fetch('https://official-joke-api.appspot.com/random_ten').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        return _this.setState({
+          jokes: json
+        });
+      }).catch(function (error) {
+        return alert(error.message);
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(Jokes, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('https://official-joke-api.appspot.com/random_joke').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        return _this2.setState({
+          joke: json
+        });
+      }).catch(function (error) {
+        return alert(error.message);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Highlighted Joke"), /*#__PURE__*/_react.default.createElement(Joke, {
+        joke: this.state.joke
+      }), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement("h3", null, "Want ten new jokes?"), /*#__PURE__*/_react.default.createElement("button", {
+        onClick: this.fetchJokes
+      }, "Click Me!"), this.state.jokes.map(function (joke) {
+        return /*#__PURE__*/_react.default.createElement(Joke, {
+          key: joke.id,
+          joke: joke
+        });
+      }));
+    }
+  }]);
+
+  return Jokes;
+}(_react.Component);
+
+var _default = Jokes;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"assets/profile.jpg":[function(require,module,exports) {
 module.exports = "/profile.0a62ebc3.jpg";
-},{}],"App.js":[function(require,module,exports) {
+},{}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28596,7 +28716,11 @@ var _Projects = _interopRequireDefault(require("./Projects"));
 
 var _SocialProfiles = _interopRequireDefault(require("./SocialProfiles"));
 
-var _profile = _interopRequireDefault(require("./assets/profile.jpg"));
+var _Title = _interopRequireDefault(require("./Title"));
+
+var _Jokes = _interopRequireDefault(require("./Jokes"));
+
+var _profile = _interopRequireDefault(require("../assets/profile.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28628,12 +28752,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-// class RegularClass {}
-// class ComponentClass extends Component {}
-// const regularClassInstance = new RegularClass();
-// const componentClassInstance = new ComponentClass();
-// console.log('regularClassInstance', regularClassInstance);
-// console.log('componentClassInstance', componentClassInstance);
 var App = /*#__PURE__*/function (_Component) {
   _inherits(App, _Component);
 
@@ -28670,11 +28788,11 @@ var App = /*#__PURE__*/function (_Component) {
         src: _profile.default,
         alt: "profile",
         className: "profile"
-      }), /*#__PURE__*/_react.default.createElement("h1", null, "Hello!!"), /*#__PURE__*/_react.default.createElement("p", null, "My name is Vijit Shah."), this.state.displayBio ? /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "I work as a Software Engineer at NBNCO."), /*#__PURE__*/_react.default.createElement("p", null, "Skillset: Python, Javascript, React, Shell scripting"), /*#__PURE__*/_react.default.createElement("button", {
+      }), /*#__PURE__*/_react.default.createElement("h1", null, "Hello!!"), /*#__PURE__*/_react.default.createElement("p", null, "My name is Vijit."), /*#__PURE__*/_react.default.createElement(_Title.default, null), this.state.displayBio ? /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "I'm always looking forward to working on meaningful projects. Looking forward to hear from you soon."), /*#__PURE__*/_react.default.createElement("p", null, "Skillset: Python, Javascript, React, Shell scripting"), /*#__PURE__*/_react.default.createElement("button", {
         onClick: this.toggleDisplayBio
       }, "Show less")) : /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
         onClick: this.toggleDisplayBio
-      }, "Read More")), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_Projects.default, null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_SocialProfiles.default, null));
+      }, "Read More")), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_Projects.default, null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_SocialProfiles.default, null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(_Jokes.default, null));
     }
   }]);
 
@@ -28683,7 +28801,7 @@ var App = /*#__PURE__*/function (_Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Projects":"Projects.js","./SocialProfiles":"SocialProfiles.js","./assets/profile.jpg":"assets/profile.jpg"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","./Title":"components/Title.js","./Jokes":"components/Jokes.js","../assets/profile.jpg":"assets/profile.jpg"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -28762,14 +28880,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _App = _interopRequireDefault(require("./App"));
+var _App = _interopRequireDefault(require("./components/App"));
 
 require("./index.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), document.getElementById('root'));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./App":"App.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/App":"components/App.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28797,7 +28915,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61388" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51466" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
